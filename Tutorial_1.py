@@ -58,22 +58,13 @@ if __name__ == '__main__':
         
          ## Get url of the title
         titleLink = "https://www.imdb.com"+ titleHref["href"]
-        
         titaleRating = ratingCol.get_text().replace("\n", "")
         
         titlenurlList.append({"Title": titleName, "Url":titleLink, "Rating": titaleRating })
         
     ## Convert to data frame
     movieDF = pd.DataFrame(titlenurlList)
+    
     ## Save as CSV
     movieDF[["Title","Rating", "Url"]].to_csv("IMDB_top_250.csv", index =False)
-        
-        
-
-# 
-#        
-#        
-#        
-#    
-#        
-#    
+ 
